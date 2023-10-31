@@ -1,11 +1,18 @@
-import {AiOutlineComment, AiOutlineMenu} from "react-icons/ai";
+import {AiOutlineComment} from "react-icons/ai";
 import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from "react-icons/md";
 import take from "../assets/take.png";
 import {Search} from "./Search.tsx";
+import {useState} from "react";
+import {UserMenu} from "../features/user/UserMenu.tsx";
 
 
 
 function Header() {
+    const [isOpen, setIsOpen] = useState(false)
+
+    function handleClick() {
+        setIsOpen(!isOpen)
+    }
     return (
         <div className='flex justify-between items-center bg-[#151515] py-7 px-10'>
             <div>
@@ -15,17 +22,21 @@ function Header() {
                 </span>
             </div>
             <Search />
-            <div className='flex items-center gap3 md:gap-5 cursor-pointer'>
-                <span className='flex items-center gap-2 text-lg text-gray-100'>
+            <div className='relative flex items-center md:gap-5 cursor-pointer'>
+                <span className='relative flex items-center text-lg text-gray-100'>
                     <AiOutlineComment className='text-3xl fill-gray-100 iconHover'/>
+                    <span className="top-0 right-1 rounded absolute w-2 h-2 bg-red-700"></span>
                 </span>
-                <span
+                <span onClick={handleClick}
                     className='flex bg-gradient-to-r from-green-500 from-10% via-sky-950 via-30% to-emerald-300 to-90% rounded-full items-center gap-2 text-lg text-gray-100'>
-                    <img className='w-10 h-10 px-1 py-1 rounded-full' src={take} alt="tk"/>
+                    {<img className='w-10 h-10 px-1 py-1 rounded-full' src={take} alt="tk"/>}
+                    <div className='absolute z-20 top-0 right-10 flex flex-col '>
+                        {isOpen && <UserMenu onClick={handleClick}/>}
+
+                    </div>
                 </span>
-                <span className='flex items-center gap-2 text-lg text-gray-100'>
-                    <AiOutlineMenu className='text-3xl fill-gray-100 iconHover'/>
-                </span>
+
+
 
             </div>
         </div>

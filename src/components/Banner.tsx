@@ -2,11 +2,12 @@ import imageCover from '../assets/image-cover.png';
 import {BsBookmarkCheck, BsPlayCircle} from "react-icons/bs";
 import {BiDownload} from "react-icons/bi";
 import {AiOutlineLike, AiOutlineShareAlt} from "react-icons/ai";
+import {Button} from "./Button.tsx";
 export function Banner() {
     return (
         <div className='relative'>
             <img src={imageCover} className="w-screen  rounded" alt="banner"/>
-            <div className='cursor-pointer absolute top-0 bg-gradient-to-t from-gray-900  to-gray-950/50  w-full h-screen'/>
+            <div className='cursor-pointer absolute top-0 bg-gradient-to-t from-gray-900  to-gray-950/50  w-full h-full'/>
 
             <div className="flex flex-col absolute  z-10 top-1/3 px-5 left-2 text-white">
                 <div>
@@ -21,29 +22,29 @@ export function Banner() {
                 </p>
                 <div className='relative flex justify-between mt-3 mb-8' >
                     <div className='flex gap-4'>
-                        <button className=" flex items-center gap-2 bg-green-500 hover:bg-green-700 transition-all duration-500 text-white font-semibold py-2 px-4 rounded">
+                        <Button variant='primary'>
                             <BsPlayCircle className='text-2xl'/>
                             Continue Watching
-                        </button>
-                        <button className=" flex items-center gap-2  hover:bg-green-700 transition-all duration-500  hover:text-white text-gray-900 font-semibold py-2 px-4 rounded">
+                        </Button>
+                        <Button variant='tertiary' >
                             <BsBookmarkCheck className='text-2xl'/>
                             Add Watchlist
-                        </button>
+                        </Button>
                     </div>
 
                     <div className='flex fle gap-4'>
-                        <button className=" flex items-center gap-2 bg-gray-950 border border-1-gray-900 hover:bg-green-700 transition-all duration-500 text-gray-100 font-normal py-1 px-1 text-sm rounded">
+                        <Button variant="secondary">
                             <BiDownload className='text-2xl'/>
                             Download
-                        </button>
-                        <button className=" flex items-center gap-2 bg-gray-950 border border-1-gray-900 hover:bg-green-700 transition-all duration-500 text-gray-100 font-normal py-1 px-1 text-sm  rounded">
+                        </Button>
+                        <Button variant="secondary">
                             <AiOutlineShareAlt className='text-2xl'/>
                             Share
-                        </button>
-                        <button className=" flex items-center gap-2 bg-gray-950 border border-1-gray-900 hover:bg-green-700 transition-all duration-500 text-gray-100 font-normal py-1 px-1 text-sm  rounded">
+                        </Button>
+                        <Button variant="secondary">
                             <AiOutlineLike className='text-2xl'/>
                             Share
-                        </button>
+                        </Button>
                     </div>
                 </div>
                 <div className='flex flex-col space-y-4 z-10 text-teal-50'>
