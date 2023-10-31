@@ -1,5 +1,10 @@
 # React + TypeScript + Vite
 
+# Movie House
+
+![image](https://github.com/MamvotaTake/movie-house/assets/79244628/35eedacd-cb60-487f-a12f-fe47e7f3636b)
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
