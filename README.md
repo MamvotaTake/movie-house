@@ -2,9 +2,7 @@
 
 # Movie House
 
-![image](https://github.com/MamvotaTake/movie-house/assets/79244628/757da13d-b78d-4f1a-b3d2-fdd1b8b31d17)
-
-
+![image](https://github.com/MamvotaTake/movie-house/assets/79244628/b549fc6a-b8bd-44ed-ac77-2268f06114b2)
 
 
 
