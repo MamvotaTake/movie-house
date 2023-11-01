@@ -1,4 +1,5 @@
 import {MovieItem} from "./MovieItem.tsx";
+import {MovieBanner} from "./MovieBanner.tsx";
 
 const movies = [
     {
@@ -86,8 +87,9 @@ const movies = [
 export function Movies() {
     return (
         <div className=' overflow-hidden '>
+            <MovieBanner/>
             <h2 className='text-xl font-bold text-white py-4 px-6'>Popular Movies For You</h2>
-            <div className='relative grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-5 py-8 md:px-6'>
+            <div className='relative grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-5 py-4 md:px-6'>
                 {movies.map((movie, index) => (
                     <MovieItem key={index} movie={movie}/>
                 ))}

@@ -4,11 +4,11 @@ import {Sidebar} from "./Sidebar.tsx";
 
 function AppLayout() {
     return (
-        <div className="grid md:grid-cols-[13rem_minmax(700px,_1fr)] h-screen ">
+        <div className="grid md:grid-cols-[13rem_minmax(700px,_1fr)] h-screen overflow-hidden ">
             <Sidebar/>
-            <div className="overflow-y-scroll  bg-[#1E1E1E]">
+            <div className="overflow-scroll  bg-[#1E1E1E]">
                 <Header/>
-                <main className="h-screen">
+                <main className="h-full">
                     <Outlet/>
                 </main>
             </div>

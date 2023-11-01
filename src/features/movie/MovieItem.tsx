@@ -6,8 +6,8 @@ interface MovieItemProps {
 export function MovieItem({movie}: MovieItemProps) {
     const {imageUrl, rating, title, releaseYear } = movie;
     return (
-            <div className='relative cursor-pointer mb-12'>
-                <img alt={title} src={imageUrl} className='w-full h-96 hover:scale-105 hover:object-center transition-all duration-500 rounded-t-lg overflow-hidden' />
+            <div className='relative cursor-pointer mb-20 object-contain'>
+                <img alt={title} src={imageUrl} className='w-full h-96 object-cover hover:scale-105 hover:object-cover transition-all duration-500 rounded-t-lg overflow-hidden' />
                 <span className='absolute top-2 rounded-full bg-gray-950 right-2 clip-polygon-6 text-white font-bold flex items-center py-1 px-1'>
                     +16
                 </span>

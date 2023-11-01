@@ -4,11 +4,12 @@ import take from "../assets/take.png";
 import {Search} from "./Search.tsx";
 import {useState} from "react";
 import {UserMenu} from "../features/user/UserMenu.tsx";
+import {Modal} from "./Modal.tsx";
 
 
 
 function Header() {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     function handleClick() {
         setIsOpen(!isOpen)
@@ -23,15 +24,22 @@ function Header() {
             </div>
             <Search />
             <div className='relative flex items-center md:gap-5 cursor-pointer'>
-                <span className='relative flex items-center text-lg text-gray-100'>
-                    <AiOutlineComment className='text-3xl fill-gray-100 iconHover'/>
-                    <span className="top-0 right-1 rounded absolute w-2 h-2 bg-red-700"></span>
-                </span>
+                <Modal>
+                    <Modal.Open opens="open">
+                        <span className='relative flex items-center text-lg text-gray-100'>
+                            <AiOutlineComment className='text-3xl fill-gray-100 iconHover'/>
+                            <span className="top-0 right-1 rounded absolute w-2 h-2 bg-red-700"></span>
+                        </span>
+                    </Modal.Open>
+                    <Modal.Window name="open">
+                        <div>Pakaipa wangu</div>
+                    </Modal.Window>
+                </Modal>
                 <span onClick={handleClick}
                     className='flex bg-gradient-to-r from-green-500 from-10% via-sky-950 via-30% to-emerald-300 to-90% rounded-full items-center gap-2 text-lg text-gray-100'>
-                    {<img className='w-10 h-10 px-1 py-1 rounded-full' src={take} alt="tk"/>}
+                    {isOpen && <img className='w-10 h-10 px-1 py-1 rounded-full' src={take} alt="tk"/>}
                     <div className='absolute z-20 top-0 right-10 flex flex-col '>
-                        {isOpen && <UserMenu onClick={handleClick}/>}
+                        {!isOpen && <UserMenu onClick={handleClick}/>}
 
                     </div>
                 </span>
