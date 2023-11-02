@@ -2,10 +2,7 @@
 
 # Movie House
 
-![image](https://github.com/MamvotaTake/movie-house/assets/79244628/757da13d-b78d-4f1a-b3d2-fdd1b8b31d17)
-
-
-
+![image](https://github.com/MamvotaTake/movie-house/assets/79244628/83ff8d18-b26f-480a-ac82-891fae452738)
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
