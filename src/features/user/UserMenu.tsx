@@ -3,6 +3,8 @@ import {BiCurrentLocation, BiSupport} from "react-icons/bi";
 import {MdOutlinePayment} from "react-icons/md";
 import take from "../../assets/take.png";
 import {UserMenuItem} from "./UserMenuItem.tsx";
+import {Modal} from "../../components/Modal.tsx";
+
 
 
 type UserMenuProps = {
@@ -85,10 +87,20 @@ export function UserMenu({onClick}: UserMenuProps) {
                         @takesure
                     </span>
                 </span>
-                    <span className='absolute top-7 -right-16 flex items-center text-lg text-gray-100'>
+
+                    <Modal>
+                        <Modal.Open opens="take">
+                            <span className='absolute top-7 -right-16 flex items-center text-lg text-gray-100'>
                     <AiOutlineComment className='text-3xl fill-gray-100 iconHover'/>
                     <span className="top-0 right-1 rounded absolute w-2 h-2 bg-red-700"></span>
                 </span>
+                        </Modal.Open>
+                        <Modal.Window name="take">
+                            <div>
+                                <p>hello</p>
+                            </div>
+                        </Modal.Window>
+                    </Modal>
 
                 </p>
                 <span onClick={onClick}
