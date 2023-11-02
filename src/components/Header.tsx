@@ -5,6 +5,7 @@ import {Search} from "./Search.tsx";
 import {useState} from "react";
 import {UserMenu} from "../features/user/UserMenu.tsx";
 import {Modal} from "./Modal.tsx";
+import {Message} from "./Message.tsx";
 
 
 
@@ -32,7 +33,7 @@ function Header() {
                         </span>
                     </Modal.Open>
                     <Modal.Window name="open">
-                        <div>Pakaipa wangu</div>
+                        <Message/>
                     </Modal.Window>
                 </Modal>
                 <span onClick={handleClick}

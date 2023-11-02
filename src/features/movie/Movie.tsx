@@ -60,10 +60,12 @@ export function Movie() {
                 </Button>
             </div>
             <div className='relative flex flex-col space-y-4'>
-                <h1 className='flex items-center justify-between text-4xl font-bold mb-5 text-stone-300'>
-                    Guardians of the Galaxy
-                    <ShareLink onClick={() => setIsOpen(!isOpen)}/>
-                </h1>
+                <div>
+                    <h1 className='flex items-center justify-between text-4xl font-bold mb-5 text-stone-300'>
+                        Guardians of the Galaxy
+                        <ShareLink isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}/>
+                    </h1>
+                </div>
                 {isOpen &&<SocialMediaLinks onClick={() => setIsOpen(!isOpen)}/>}
                 <div className='text-2xl flex items-center gap-4 flex-wrap cursor-pointer'>
                     <span className='flex items-center text-sm hover:bg-gray-400 transition-all duration-500 px-1 py-1 rounded-lg bg-gray-300 text-gray-900'>10/25/2019</span>

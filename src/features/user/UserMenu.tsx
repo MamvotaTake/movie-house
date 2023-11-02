@@ -51,7 +51,7 @@ const userMenuItems = [
             console.log("Offers")
         },
         count: 3,
-        type: 'green',
+        type: 'yellow',
     },
     {
         name: "Refer a friend",
@@ -80,7 +80,7 @@ export function UserMenu({onClick}: UserMenuProps) {
             <div className='flex space-x-2'>
                 <img src={take} alt="tk"
                      className='w-12 h-12 bg-gradient-to-r from-green-500 from-10% via-sky-950 via-30% to-emerald-300 to-90%   border rounded-full'/>
-                <p className=' relative flex items-center justify-between font-semibold'>
+                <div className=' relative flex items-center justify-between font-semibold'>
                 <span className='flex flex-col text-lg text-gray-100'>
                         Takesure Mamvota
                     <span className=' text-gray-400'>
@@ -102,7 +102,7 @@ export function UserMenu({onClick}: UserMenuProps) {
                         </Modal.Window>
                     </Modal>
 
-                </p>
+                </div>
                 <span onClick={onClick}
                       className=' absolute top-0 right-0 flex justify-center items-center  cursor-pointer px-4 py-2 text-sm text-gray-100'><AiOutlineClose
                     className='text-xl hover:text-gray-400 transition-all duration-500 fill-gray-100'/></span>
