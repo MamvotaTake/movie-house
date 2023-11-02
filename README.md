@@ -4,7 +4,8 @@
 
 ![image](https://github.com/MamvotaTake/movie-house/assets/79244628/83ff8d18-b26f-480a-ac82-891fae452738)
 
-![image](https://github.com/MamvotaTake/movie-house/assets/79244628/c90370f1-c1d4-4490-bf02-c11f7569d635)
+![image](https://github.com/MamvotaTake/movie-house/assets/79244628/81820d64-e6bb-4907-9b5e-98bbe56df713)
+
 
 
 
