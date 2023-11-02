@@ -7,6 +7,7 @@
 ![image](https://github.com/MamvotaTake/movie-house/assets/79244628/81820d64-e6bb-4907-9b5e-98bbe56df713)
 
 
+![image](https://github.com/MamvotaTake/movie-house/assets/79244628/e9cb90e9-9700-4caa-966e-4ea731816552)
 
 
 The movie application allows users to browse and select films of their choice. They can watch the selected film and also rate it based on their experience. Additionally, users have the option to share the film with their friends or loved ones.
