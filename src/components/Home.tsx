@@ -42,13 +42,13 @@ const actors = [
 
 function Home() {
     return (
-        <div className='text-white px-6 py-6'>
+        <div className='px-6 py-6 text-white'>
             <Banner/>
             {actors.length !== 0 &&
                 <div className='flex flex-col px-6 py-6'>
-                    <p className='text-2xl font-bold text-gray-200 mb-6'>Top Cast</p>
+                    <p className='mb-6 text-2xl font-bold text-gray-200'>Top Cast</p>
 
-                    <div className='flex justify-between gap-5 '>
+                    <div className='flex justify-between gap-5'>
 
                         {actors.map(actor => (
                             <Actor

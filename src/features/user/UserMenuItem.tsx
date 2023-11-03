@@ -18,8 +18,8 @@ export function UserMenuItem({item}: UserMenuProps) {
         <Modal>
             <Modal.Open opens={name}>
                 <div onClick={onClick}
-                     className="flex items-center justify-between mt-7 px-4 py-2 rounded-lg  hover:bg-gray-500 transition-all duration-700">
-                    <span className="flex items-center text-lg gap-3"><span className="text-2xl fill-gray-100">{icon}</span> {name}</span>
+                     className="mt-7 flex items-center justify-between rounded-lg px-4 py-2 transition-all duration-700 hover:bg-gray-500">
+                    <span className="flex items-center gap-3 text-lg"><span className="fill-gray-100 text-2xl">{icon}</span> {name}</span>
                     <span className={`${backgroundColorClass}  text-300 text-lg font-semibold px-2 text-gray-900 rounded`}>{count}</span>
                 </div>
             </Modal.Open>

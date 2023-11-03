@@ -10,7 +10,7 @@ export function ShareLink({onClick, isOpen}: ShareLinkProps) {
 
     if (isOpen) return null;
     return (
-        <span onClick={onClick}  className='bg-gray-300 cursor-pointer animate-pulse hover:animate-none hover:bg-gray-400 transition-all duration-500 py-1 px-1 rounded-full text-gray-900'
+        <span onClick={onClick}  className='animate-pulse cursor-pointer rounded-full bg-gray-300 px-1 py-1 text-gray-900 transition-all duration-500 hover:animate-none hover:bg-gray-400'
               >
             <AiOutlineShareAlt/>
         </span>

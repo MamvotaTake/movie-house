@@ -45,9 +45,9 @@ function Window({ children, name }: WindowProps) {
 
     return createPortal(
         <div className='fixed top-0 transition-all duration-500 left-0 w-full h-full backdrop-blur-sm  bg-[rgba(255, 255, 255, 0.1)] z-1000 '>
-            <div  className='fixed top-2/4 left-1/2 -translate-x-1/2 -translate-y-2/4 tra bg-gray-50 rounded-sm shadow-md px-3 py-4 transition-all duration-300'>
-                <button ref={ref} onClick={close} className='absolute top-2 right-2 cursor-pointer bg-stone-100 rounded-full hover:bg-stone-50 transition-all duration-200'>
-                    <HiXMark className="w-4 h-4 text-stone-900"/>
+            <div  className='fixed top-2/4 left-1/2 -translate-x-1/2 -translate-y-2/4 rounded-sm bg-gray-50 px-3 py-4 shadow-md transition-all duration-300 tra'>
+                <button ref={ref} onClick={close} className='absolute top-2 right-2 cursor-pointer rounded-full bg-stone-100 transition-all duration-200 hover:bg-stone-50'>
+                    <HiXMark className="h-4 w-4 text-stone-900"/>
                 </button>
                 <div>
                     {cloneElement(children as ReactElement, { onCloseModal: close })}

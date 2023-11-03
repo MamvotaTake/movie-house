@@ -6,27 +6,27 @@ interface  SocialMediaLinksProps {
 }
 export function SocialMediaLinks({onClick}: SocialMediaLinksProps) {
     return (
-        <div className="absolute flex right-0  bg-white animate-pulse hover:animate-none px-4 py-2.5 rounded-lg">
-            <div className='flex gap-2 flex-wrap cursor-pointer'>
-                <span className='flex flex-col text-xs text-gray-800 items-center'>
-                <AiOutlineWhatsApp className="text-xl fill-green-600"/>
+        <div className="absolute right-0 flex animate-pulse rounded-lg bg-white px-4 py-2.5 hover:animate-none">
+            <div className='flex cursor-pointer flex-wrap gap-2'>
+                <span className='flex flex-col items-center text-xs text-gray-800'>
+                <AiOutlineWhatsApp className="fill-green-600 text-xl"/>
                 WhatsApp
             </span>
-                <span className='flex flex-col text-xs text-gray-800 items-center'>
-                <CiFacebook className="text-xl fill-blue-600"/>
+                <span className='flex flex-col items-center text-xs text-gray-800'>
+                <CiFacebook className="fill-blue-600 text-xl"/>
                 Facebook
             </span>
-                <span className='flex flex-col text-xs text-gray-800 items-center'>
-                <CiTwitter className="text-xl fill-blue-700"/>
+                <span className='flex flex-col items-center text-xs text-gray-800'>
+                <CiTwitter className="fill-blue-700 text-xl"/>
                 Twitter
             </span>
-                <span className='flex flex-col text-xs text-gray-800 items-center'>
-                <AiOutlineMail className="text-xl fill-gray-600"/>
+                <span className='flex flex-col items-center text-xs text-gray-800'>
+                <AiOutlineMail className="fill-gray-600 text-xl"/>
                 Email
             </span>
             </div>
-            <span className='relative  -top-1 -right-2 cursor-pointer '>
-                <AiOutlineClose onClick={onClick} className="text-lg fill-gray-500 hover:fill-red-600 transition-all duration-300"/>
+            <span className='relative -top-1 -right-2 cursor-pointer'>
+                <AiOutlineClose onClick={onClick} className="fill-gray-500 text-lg transition-all duration-300 hover:fill-red-600"/>
             </span>
         </div>
     );

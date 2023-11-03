@@ -18,9 +18,9 @@ export function Sidebar() {
             <Logo/>
             <MainLink/>
             <MovieCategory/>
-            <div className='bg-red-600 py-2 px-4 mb-8 rounded cursor-pointer hover:bg-red-500 transition-all duration-300'>
+            <div className='mb-8 cursor-pointer rounded bg-red-600 px-4 py-2 transition-all duration-300 hover:bg-red-500'>
                 <span className='flex items-center gap-2 text-lg text-gray-100'>
-                    <CiLogout className='text-xl fill-gray-100' /> Logout
+                    <CiLogout className='fill-gray-100 text-xl' /> Logout
                 </span>
             </div>
         </div>

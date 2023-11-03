@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 export default function MovieCategory() {
     return <div className="py-6 space-y-6">
-        <p className="text-gray-500 font-semibold">Categories</p>
+        <p className="font-semibold text-gray-500">Categories</p>
         <div className="flex flex-col space-y-4">
             <Link to="/movies"
                   className="link">
