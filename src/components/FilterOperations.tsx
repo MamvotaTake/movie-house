@@ -12,6 +12,8 @@ export function FilterOperations() {
                     { value: "top_rated", label: "Top rated" },
                     { value: "on_the_air", label: "On the air" },
                     { value: "airing_today", label: "Airing today" },
+                    { value: "tv", label: "Tv" },
+                    { value: "people", label: "People" },
                 ]} />
             <SortBy
                 options={[

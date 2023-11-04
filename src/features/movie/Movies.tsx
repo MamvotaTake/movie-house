@@ -10,11 +10,11 @@ export function Movies() {
     const movies = useLoaderData() as Movie[];
 
     return (
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden mb-12'>
             <MovieBanner/>
             <div className='flex items-center justify-between '>
                 <div className='text-sm flex items-center'>
-                    <h2 className='px-6 py-6 text-lg font-semibold text-white'>See Movies For You</h2>
+                    <h2 className='px-6 py-6 text-lg font-semibold text-white'>Explore Movies</h2>
                     <FilterOperations/>
                 </div>
 
