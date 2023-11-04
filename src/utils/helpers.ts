@@ -21,7 +21,7 @@ export function getImageUrl(imgPath: string) {
 }
 
 export function formatOverview(overview: string){
-    return overview.split('-').slice(0,18).join(' ').concat('...');
+    return overview.split(' ').slice(0,18).join(' ').concat('...');
 }
 
 export function formatRating(rating: number){

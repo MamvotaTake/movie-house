@@ -8,7 +8,7 @@
     transition-all duration-700 focus:outline-none focus:ring focus:ring-stone-400 md:px-6 md:py-3
   }
     .active {
-        @apply relative right-6  border-l-4 px-6  border-l-stone-100;
+        @apply relative right-6 border-l-4 px-6  border-l-stone-100;
     }
   .link {
     @apply flex text-gray-500 cursor-pointer items-center  gap-3 hover:text-gray-400 transition-all duration-500 ;

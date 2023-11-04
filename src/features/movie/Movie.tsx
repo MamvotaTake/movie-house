@@ -8,17 +8,22 @@ import {useState} from "react";
 import {getMovie} from "../../service/tmdbApi.ts";
 import {Movie as MovieType} from "../../types.ts";
 import {ActionFunctionArgs, LoaderFunction, ParamParseKey, Params, useLoaderData} from "react-router-dom";
-import {formatOverview, formatRating, getImageUrl} from "../../utils/helpers.ts";
+import {formatRating, getImageUrl} from "../../utils/helpers.ts";
+import {TextExpander} from "../../components/TextExpander.tsx";
 
 export function Movie() {
     const [isOpen, setIsOpen] = useState(false);
+
     const movie = useLoaderData() as MovieType;
     const { original_title, production_companies, vote_average,  poster_path, overview, release_date, genres, homepage } = movie
+    console.log(movie)
     return (
-        <div className='flex gap-10 px-9 py-8 text-white'>
-            <div className='flex flex-col gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-[370px_minmax(0px,_1fr)] px-9 py-8 text-white mb-20'>
+            <div className='flex w-full md:w-80 flex-col gap-4'>
                 <div className='relative overflow-hidden transition-all duration-500'>
-                    <img className='h-96 w-80 cursor-pointer rounded-lg object-cover' src={getImageUrl(poster_path)} alt={original_title} />
+                    <div className='flex '>
+                        <img className='h-96 w-full  cursor-pointer rounded-lg object-center' src={getImageUrl(poster_path)} alt={original_title} />
+                    </div>
                     <div className='absolute top-0 bottom-0 flex w-full translate-y-80 cursor-pointer px-4 py-6 font-bold text-white transition-all duration-700 bg-gray-950/50 hover:translate-y-0'>
                         <div className='absolute flex justify-between gap-8 text-xs'>
                             <span className='flex gap-1 text-xs'>
@@ -69,7 +74,7 @@ export function Movie() {
                     Watch
                 </Button>
             </div>
-            <div className='relative flex flex-col space-y-4'>
+            <div className='flex flex-col space-y-4'>
                 <div>
                     <h1 className='mb-5 flex items-center justify-between text-4xl font-bold text-stone-300'>
                         {original_title}
@@ -100,12 +105,11 @@ export function Movie() {
                     </span>
 
                 </div>
-                <div className="flex w-9/12 flex-col">
-                    <h4 className='mt-7 mb-1 text-lg font-bold'>Overview</h4>
-                    <p className='text-justify text-sm' >
-                        { formatOverview(overview)} <span className='cursor-pointer text-blue-500 transition-all duration-300 hover:underline'>See more</span>
-                    </p>
-
+                <div className="flex flex-col">
+                    <div className="flex-col" >
+                        <h4 className='mt-7 mb-1 text-lg font-bold'>Overview</h4>
+                        <TextExpander collapsedNumWords={20} expanded={false}>{overview}</TextExpander>
+                    </div>
                     <div className='mt-8 flex flex-wrap gap-4'>
                     <span className='flex flex-col items-center gap-2 font-bold'>
                         Ali Atay

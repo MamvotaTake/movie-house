@@ -5,9 +5,9 @@ import {Footer} from "./Footer.tsx";
 
 function AppLayout() {
     return (
-        <div className="grid grid-rows-1 md:grid-cols-[13rem_minmax(700px,_1fr)] h-screen overflow-hidden ">
+        <div className="grid grid-rows-1 md:grid-cols-[13rem_minmax(700px,_1fr)] h-screen">
             <Sidebar/>
-            <div className="overflow-y-scroll  bg-[#1E1E1E]">
+            <div className="overflow-y-scroll bg-[#1E1E1E]">
                 <Header/>
                 <main className="">
                     <Outlet/>
